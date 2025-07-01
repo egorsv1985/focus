@@ -1,0 +1,39 @@
+@font-face {
+	font-family: 'Onest-medium';
+	font-display: swap;
+	src: url("../fonts/Onest-Medium.woff2") format("woff2"), url("../fonts/Onest-Medium.ttf") format("tff");
+	font-weight: 400;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Onest';
+	font-display: swap;
+	src: url("../fonts/Onest-Regular.woff2") format("woff2"), url("../fonts/Onest-Regular.ttf") format("tff");
+	font-weight: 500;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Onest-semibold';
+	font-display: swap;
+	src: url("../fonts/Onest-SemiBold.woff2") format("woff2"), url("../fonts/Onest-SemiBold.ttf") format("tff");
+	font-weight: 400;
+	font-style: normal;
+}
+/* For browsers that support clamp and container queries */
+@supports (font-size: clamp(1rem, 1cqi, 1rem)) {
+  :root {
+		--6xl: clamp(1.63rem, 2.66cqi + 1.09rem, 3.75rem);
+  }
+}
+/* For browsers that don't support clamp or container queries */
+@supports not (font-size: clamp(1rem, 1cqi, 1rem)) {
+  :root {
+		--6xl: 1.63rem;
+  }
+  @media screen and (min-width: 1600px) {
+    :root {
+			--6xl: 3.75rem;
+    }
+  }
+}

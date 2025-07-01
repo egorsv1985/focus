@@ -1,0 +1,133 @@
+// === Импорт функций Bootstrap ===
+@import 'bootstrap-scss/functions';
+
+// === Цвета и переменные ===
+$primary: #00E56D;
+
+$black: #000;
+
+
+$link-color: #000;
+// $link-hover-color: #990000;
+
+$theme-colors: (
+	'primary': $primary,
+	
+	'black': $black,
+	
+);
+// $box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+
+// === Шрифт ===
+$font-family-sans-serif: (
+	'PF Square Sans Pro',
+	-apple-system,
+	BlinkMacSystemFont,
+	Arial,
+	'Noto Sans',
+	sans-serif,
+	'Apple Color Emoji',
+	'Segoe UI Emoji',
+	'Segoe UI Symbol',
+	'Noto Color Emoji'
+);
+
+// === Контейнеры ===
+$container-max-widths: (
+	sm: 540px,
+	md: 800px,
+	lg: 960px,
+	xl: 1140px,
+	xxl: 1312px,
+);
+
+// === Отступы ===
+$spacer: 1rem;
+$spacers: (
+	0: 0,
+	1: $spacer * 0.25,
+	2: $spacer * 0.5,
+	3: $spacer,
+	4: $spacer * 1.5,
+	5: $spacer * 3,
+	10: $spacer * 0.625,
+	20: $spacer * 1.25,
+	30: $spacer * 1.875,
+	32: $spacer * 2,
+	35: $spacer * 2.1875,
+	40: $spacer * 2.5,
+	50: $spacer * 3.125,
+	60: $spacer * 3.75,
+	80: $spacer * 5,
+	100: $spacer * 6.25,
+);
+
+// === Утилиты Bootstrap ===
+$utilities: () !default;
+$line-height-base: 1.2 !default;
+$prefix: 'bs-';
+$utilities: map-merge(
+	$utilities,
+	(
+		'gap': (
+			property: gap,
+			class: gap,
+			values: $spacers,
+		),
+		'opacity': (
+			property: opacity,
+			values: (
+				0: 0,
+				5: 0.05,
+				20: 0.2,
+				25: 0.25,
+				40: 0.4,
+				50: 0.5,
+				60: 0.6,
+				70: 0.7,
+				75: 0.75,
+				80: 0.8,
+				100: 1,
+			),
+		),
+		'line-height': (
+			property: line-height,
+			class: lh,
+			values: (
+				1: 1,
+				base: 1.2,
+				sm: 1.1,
+				lg: 1.5,
+			),
+		),
+		'rounded': (
+			property: border-radius,
+			class: rounded,
+			values: (
+				null: var(--#{$prefix}border-radius),
+				0: 0,
+				1: var(--#{$prefix}border-radius-sm),
+				2: 2px,
+				3: var(--#{$prefix}border-radius-lg),
+				4: var(--#{$prefix}border-radius-xl),
+				5: var(--#{$prefix}border-radius-xxl),
+				10: 10px,
+				20: 20px,
+				30: 30px,
+				40: 40px,
+				100: 100px,
+				pill: var(--#{$prefix}border-radius-pill),
+				circle: 50%,
+			),
+		),
+	)
+);
+
+
+
+// === Импорты Bootstrap ===
+@import 'bootstrap-scss/variables';
+@import 'bootstrap-scss/maps';
+@import 'bootstrap-scss/mixins';
+@import 'bootstrap-scss/utilities';
+@import 'bootstrap-scss/bootstrap';
