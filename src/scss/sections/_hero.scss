@@ -1,9 +1,11 @@
 .hero {
-	padding: 100px 0;
+	padding-top: 108px;
+	padding-bottom: 40px;
 	background-color: #000;
 	color: #fff;
 	position: relative;
 	overflow: hidden;
+	background: linear-gradient(180deg, rgba(0, 0, 0, 0) 64.78%, #000000 100%), url("@img/hero.png") no-repeat center / cover;
 
 	&__container {
 		display: flex;
@@ -12,30 +14,31 @@
 		min-height: 100vh;
 	}
 
+
 	&__title {
-		font-size: 64px;
-		font-weight: 700;
-		line-height: 1.2;
+		font-size: 86px;
+    font-weight: 600;
+    line-height: 0.96;
+    letter-spacing: 5.4px;
+    max-width: 887px;
+    margin-top: 118px;
+    padding-left: 111px;
+		margin-bottom: 136px;
 
 		span {
-			display: block;
+			
+			color: #00E56D; 
 		}
 
-		@media (max-width: 768px) {
-			font-size: 32px;
-			text-align: center;
-		}
+		
 	}
 
-	&__highlight {
-		color: #00ff84; // зелёный акцент
-	}
 
 	&__info {
 		display: flex;
 		align-items: flex-end;
 		justify-content: space-between;
-		margin-top: 40px;
+		
 
 		@media (max-width: 768px) {
 			flex-direction: column;
@@ -47,8 +50,9 @@
 
 	&__text {
 		max-width: 480px;
-		font-size: 14px;
-		line-height: 1.6;
-		color: #ccc;
+		font-size: 16px;
+		line-height: 1.2;
+		font-weight: 500;
+		color: #fff;
 	}
 }

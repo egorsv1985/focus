@@ -5,7 +5,7 @@
 	<meta charset="UTF-8" />
 	<meta name="format-detection" content="telephone=no" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<link href="https://fonts.googleapis.com/css?family=Onest:regular,500,600" rel="stylesheet" />
+	
 	<link rel="preconnect" href="https://fonts.gstatic.com" />
 
 
@@ -15,46 +15,42 @@
 	<link rel="icon" type="image/png" sizes="16x16" href="files/favicon-16x16.png">
 	<link rel="manifest" href="files/site.webmanifest">
 	<link rel="shortcut icon" href="files/favicon.ico" />
-	<!-- <meta name="robots" content="noindex, nofollow"> -->
-	<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> -->
-
 	<script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/gsap.min.js"></script>
 	<script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/ScrollTrigger.min.js"></script>
 	<script src="js/app.js"></script>
 </head>
 <body class="leading-tight bg-white font-Onest">		
 		<header class="header">
-	<div class="header__container container">
-		<a href="#" class="header__logo">FOCUS REACTIVE</a>
-
-		<nav class="header__nav nav" id="mobileMenu">
-			<ul class="nav__list">
-				<li class="nav__item"><a href="#" class="nav__link">Home</a></li>
-				<li class="nav__item"><a href="#" class="nav__link">Services</a></li>
-				<li class="nav__item"><a href="#" class="nav__link">Portfolio</a></li>
-				<li class="nav__item"><a href="#" class="nav__link">About</a></li>
-				<li class="nav__item"><a href="#" class="nav__link">Blog</a></li>
-			</ul>
-		</nav>
-
-		<a href="#" class="header__cta button button--green">Contact Us</a>
-
-		<!-- бургер для мобилки -->
-		<button class="header__burger" id="burger">
-			<span></span><span></span><span></span>
-		</button>
+	<div class="container">
+		<div class="header__wrapper">
+			
+			<a href="#" title="Focus reactive" class="header__logo"><img src="./images/icons/logo.svg" loading="lazy" alt="Focus reactive" title="Focus reactive" width="110"
+				height="38">
+			</a>		
+			<nav class="header__nav nav" id="mobileMenu">
+				<ul class="nav__list">
+					<li class="nav__item"><a href="#" class="nav__link">Home</a></li>
+					<li class="nav__item"><a href="#" class="nav__link">Services</a></li>
+					<li class="nav__item"><a href="#" class="nav__link">Portfolio</a></li>
+					<li class="nav__item"><a href="#" class="nav__link">About</a></li>
+					<li class="nav__item"><a href="#" class="nav__link">Blog</a></li>
+				</ul>
+			</nav>
+			<a href="#" class="header__btn btn btn--green">Contact Us</a>
+			<!-- бургер для мобилки -->
+			<button class="header__burger" id="burger">
+				<span></span><span></span><span></span>
+			</button>
+		</div>
 	</div>
 </header>
 
 
 		<main>		
 				<section class="hero">
-	<div class="hero__container container">
-		<h1 class="hero__title">
-			<span>We build</span><br />
-			<span>Composable</span><br />
-			<span>Content Systems.</span><br />
-			<span class="hero__highlight">Fast and Scalable.</span>
+	<div class="container">
+		<h1 class="hero__title"> We build Composable Content Systems.
+			<span>Fast and Scalable.</span>
 		</h1>
 
 		<div class="hero__info">

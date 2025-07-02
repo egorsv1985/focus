@@ -1,25 +1,30 @@
 @font-face {
-	font-family: 'Onest-medium';
+	font-family: 'InterDisplay';
 	font-display: swap;
-	src: url("../fonts/Onest-Medium.woff2") format("woff2"), url("../fonts/Onest-Medium.ttf") format("tff");
+	src: url("../fonts/InterDisplay-Regular.woff2") format("woff2"),
+	     url("../fonts/InterDisplay-Regular.ttf") format("truetype");
 	font-weight: 400;
 	font-style: normal;
 }
 
 @font-face {
-	font-family: 'Onest';
+	font-family: 'InterDisplay';
 	font-display: swap;
-	src: url("../fonts/Onest-Regular.woff2") format("woff2"), url("../fonts/Onest-Regular.ttf") format("tff");
+	src: url("../fonts/InterDisplay-Medium.woff2") format("woff2"),
+	     url("../fonts/InterDisplay-Medium.ttf") format("truetype");
 	font-weight: 500;
 	font-style: normal;
 }
+
 @font-face {
-	font-family: 'Onest-semibold';
+	font-family: 'InterDisplay';
 	font-display: swap;
-	src: url("../fonts/Onest-SemiBold.woff2") format("woff2"), url("../fonts/Onest-SemiBold.ttf") format("tff");
-	font-weight: 400;
+	src: url("../fonts/InterDisplay-SemiBold.woff2") format("woff2"),
+	     url("../fonts/InterDisplay-SemiBold.ttf") format("truetype");
+	font-weight: 600;
 	font-style: normal;
 }
+
 /* For browsers that support clamp and container queries */
 @supports (font-size: clamp(1rem, 1cqi, 1rem)) {
   :root {

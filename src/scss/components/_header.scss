@@ -1,26 +1,23 @@
 .header {
 	position: fixed;
-	width: 100%;
+	right: 0;
 	top: 0;
 	left: 0;
 	background-color: transparent;
-	padding: 20px 0;
+	padding: 32px 0;
 	z-index: 10;
-
-	&__container {
+	&__wrapper {
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
 	}
 
 	&__logo {
-		font-size: 20px;
-		font-weight: 800;
-		color: #fff;
-		text-transform: uppercase;
+		position: relative;
+		
 	}
 
-	&__cta {
+	&__btn {
 		display: none;
 
 		@media (min-width: 992px) {
@@ -48,12 +45,14 @@
 
 .nav {
 	&__list {
-		display: flex;
-		gap: 30px;
-		list-style: none;
+		display: flex;				
 	}
 
-	&__item {}
+	&__item {
+		&:not(:last-child){
+			margin-right: 24px;
+		}
+	}
 
 	&__link {
 		color: #fff;
