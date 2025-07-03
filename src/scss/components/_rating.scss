@@ -1,18 +1,22 @@
 .rating {
-	display: flex;
-	align-items: center;
-	gap: 8px;
-	font-size: 14px;
-
+	
 	&__platform {
-		font-weight: 700;
+		width: 100%;
+	}
+	&__wrap{
+		
+		display: flex;
+		align-items: center;
+	
 	}
 
 	&__stars {
-		color: #00ff84;
+		color: #00E56D;
 	}
-
+	
 	&__score {
-		color: #aaa;
+		font-size: 12px;
+		color: #fff;
+		margin-left: 4px;
 	}
 }

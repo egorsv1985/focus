@@ -6,7 +6,7 @@ export const paths = {
 		scss: './src/scss/**/*.scss',
 		php: './public_html/**/*.php',
 		images: './src/images/**/*',
-		fonts: './src/fonts/**/*',
+		fonts: './src/fonts/**/*.{ttf,otf,woff,woff2}',
 		files: './src/files/**/*',
 		js: './src/js/**/*.js',
 	},

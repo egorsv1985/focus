@@ -4,19 +4,17 @@ import { plugins } from '../config/plugins.js'
 
 // Задача для копирования шрифтов
 export const fonts = () => {
-	return plugins.gulp
-		.src(paths.src.fonts)
-		.pipe(plugins.newer(fontsDestination))
-		.pipe(
-			plugins.fonter({
-				formats: ['ttf'],
-			})
-		)
-		.pipe(plugins.gulp.dest(fontsDestination)) // Помещаем конвертированные ttf обратно в папку src/fonts
-		.pipe(plugins.gulp.src(paths.src.fonts))
-		.pipe(plugins.filter('**/*.ttf')) // Фильтруем только файлы формата ttf
-		.pipe(plugins.newer(fontsDestination))
-		.pipe(plugins.ttf2woff2())
-		.pipe(plugins.gulp.dest(fontsDestination)) // Помещаем конвертированные woff обратно в папку src/fonts
-		.pipe(plugins.browserSync.stream())
+	return (
+		plugins.gulp
+			.src(paths.src.fonts) // './src/fonts/**/*.{ttf,otf,woff,woff2}'
+			.pipe(plugins.plumber(plugins.notify.onError('Fonts error')))
+			.pipe(plugins.newer(fontsDestination))
+			// Конвертация .otf → .ttf (если нужно)
+			.pipe(plugins.fonter({ formats: ['ttf'] }))
+			// Конвертация .ttf → .woff2
+			.pipe(plugins.ttf2woff2())
+			// Копирование всех .woff2 в build
+			.pipe(plugins.gulp.dest(paths.dest.dev + 'fonts/'))
+			.pipe(plugins.browserSync.stream())
+	)
 }

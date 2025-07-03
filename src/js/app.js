@@ -45,7 +45,7 @@ document.addEventListener('DOMContentLoaded', function () {
 		opacity: 0,
 		duration: 1,
 	})
-
+	
 	tl.from(
 		'.integrator__group--input .integrator__card',
 		{
