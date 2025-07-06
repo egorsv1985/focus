@@ -32,62 +32,55 @@ document.addEventListener('DOMContentLoaded', function () {
 		scrollTrigger: {
 			trigger: '.integrator',
 			start: 'top top',
-			end: '+=2000',
+			end: '+=1500',
 			pin: true,
 			scrub: 1,
 			markers: false,
 		},
 	})
 
-	// Анимация input-группы
-	tl.from('.integrator__group--input .integrator__title', {
-		y: 60,
+	// Появление заголовка
+	tl.from('.integrator__title', {
+		y: 80,
 		opacity: 0,
 		duration: 1,
 	})
-	
+
+	// Появление карточек
 	tl.from(
-		'.integrator__group--input .integrator__card',
+		'.card__inner',
 		{
-			y: 60,
+			y: 80,
 			opacity: 0,
 			stagger: 0.2,
-			duration: 1,
-		},
-		'-=0.8'
-	)
-
-	tl.to('.integrator__group--input', {
-		opacity: 0,
-		duration: 0.6,
-	})
-
-	// Обязательно показываем output-группу
-	tl.to(
-		'.integrator__group--output',
-		{
-			opacity: 1,
-			duration: 0,
+			duration: 0.8,
+			ease: 'power2.out',
 		},
 		'-=0.6'
 	)
 
-	tl.from('.integrator__group--output .integrator__title', {
-		y: 60,
-		opacity: 0,
-		duration: 1,
-	})
-
-	tl.from(
-		'.integrator__group--output .integrator__card',
+	// Переворот карточек
+	tl.to(
+		'.card__inner',
 		{
-			y: 60,
-			opacity: 0,
+			rotateY: 180,
+			duration: 1.2,
 			stagger: 0.2,
-			duration: 1,
+			ease: 'power2.inOut',
 		},
-		'-=0.8'
+		'+=0.5'
 	)
+
+	// Замена текста
+	tl.to('.integrator__title', {
+		onStart: () => {
+			const title = document.querySelector('.integrator__title')
+			title.textContent = 'Ship Everywhere'
+			title.classList.add('integrator__title--green')
+		},
+		opacity: 1,
+		duration: 0.2,
+	})
 	
 })
 
