@@ -39,14 +39,13 @@ document.addEventListener('DOMContentLoaded', function () {
 		},
 	})
 
-	// Появление заголовка
-	tl.from('.integrator__title', {
-		y: 80,
-		opacity: 0,
+	tl.to('.title--1', {
+		y: -40,
+		opacity: 1,
 		duration: 1,
+		ease: 'power3.out',
 	})
 
-	// Появление карточек
 	tl.from(
 		'.card__inner',
 		{
@@ -56,10 +55,9 @@ document.addEventListener('DOMContentLoaded', function () {
 			duration: 0.8,
 			ease: 'power2.out',
 		},
-		'-=0.6'
+		'-=0.5'
 	)
 
-	// Переворот карточек
 	tl.to(
 		'.card__inner',
 		{
@@ -71,16 +69,27 @@ document.addEventListener('DOMContentLoaded', function () {
 		'+=0.5'
 	)
 
-	// Замена текста
-	tl.to('.integrator__title', {
-		onStart: () => {
-			const title = document.querySelector('.integrator__title')
-			title.textContent = 'Ship Everywhere'
-			title.classList.add('integrator__title--green')
-		},
-		opacity: 1,
-		duration: 0.2,
+	tl.to('.title--1', {
+		y: -100,
+		opacity: 0,
+		duration: 0.4,
+		ease: 'power1.in',
 	})
+
+	tl.fromTo(
+		'.title--2',
+		{
+			y: 40,
+			opacity: 0,
+		},
+		{
+			y: 0,
+			opacity: 1,
+			duration: 0.6,
+			ease: 'power3.out',
+		},
+		'-=0.2'
+	)
 	
 })
 
