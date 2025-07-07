@@ -39,43 +39,58 @@ document.addEventListener('DOMContentLoaded', function () {
 		},
 	})
 
-	tl.to('.title--1', {
-		y: -40,
-		opacity: 1,
-		duration: 1,
-		ease: 'power3.out',
-	})
-
+	// 1. Появление карточек (без задержек, с лёгким "выплыванием")
 	tl.from(
 		'.card__inner',
 		{
 			y: 80,
 			opacity: 0,
-			stagger: 0.2,
+			duration: 1,
+			ease: 'power3.out',
+		},
+		0
+	)
+
+	// 2. Появление первого заголовка
+	tl.fromTo(
+		'.title--1',
+		{
+			y: 40,
+			opacity: 0,
+		},
+		{
+			y: 0,
+			opacity: 1,
 			duration: 0.8,
 			ease: 'power2.out',
 		},
-		'-=0.5'
+		0.2
 	)
 
+	// 3. Переворот карточек
 	tl.to(
 		'.card__inner',
 		{
 			rotateY: 180,
-			duration: 1.2,
-			stagger: 0.2,
+			duration: 1,
 			ease: 'power2.inOut',
 		},
-		'+=0.5'
+		0.8
 	)
 
-	tl.to('.title--1', {
-		y: -100,
-		opacity: 0,
-		duration: 0.4,
-		ease: 'power1.in',
-	})
+	// 4. Уход первого заголовка
+	tl.to(
+		'.title--1',
+		{
+			y: -40,
+			opacity: 0,
+			duration: 0.6,
+			ease: 'power1.in',
+		},
+		1.0
+	)
 
+	// 5. Появление второго заголовка
 	tl.fromTo(
 		'.title--2',
 		{
@@ -86,9 +101,9 @@ document.addEventListener('DOMContentLoaded', function () {
 			y: 0,
 			opacity: 1,
 			duration: 0.6,
-			ease: 'power3.out',
+			ease: 'power2.out',
 		},
-		'-=0.2'
+		1.2
 	)
 	
 })
