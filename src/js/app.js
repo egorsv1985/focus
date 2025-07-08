@@ -18,12 +18,27 @@ document.addEventListener('DOMContentLoaded', function () {
 
 	// Кейсы
 	const cases = document.querySelectorAll('[data-case]')
-	cases.forEach(el => {
-		el.addEventListener('mouseenter', () => {
-			cases.forEach(c => c.classList.remove('case--active'))
+
+	// Проверка на поддержку hover
+	const hasHoverSupport = window.matchMedia(
+		'(hover: hover) and (pointer: fine)'
+	).matches
+
+	if (hasHoverSupport) {
+		// Работает только на десктопе
+		cases.forEach(el => {
+			el.addEventListener('mouseenter', () => {
+				cases.forEach(c => c.classList.remove('case--active'))
+				el.classList.add('case--active')
+			})
+		})
+	} else {
+		// На мобилках: все раскрыты
+		cases.forEach(el => {
 			el.classList.add('case--active')
 		})
-	})
+	}
+
 
 	// GSAP pin + scroll
 	gsap.registerPlugin(ScrollTrigger)
