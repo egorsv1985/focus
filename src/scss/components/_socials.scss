@@ -1,6 +1,9 @@
 .socials {
 	display: flex;
 	gap: 8px;
+	@media (max-width: 991px) {
+		gap: 4px;
+	}
 
 	&__item {}
 

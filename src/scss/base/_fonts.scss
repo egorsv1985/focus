@@ -1,16 +1,7 @@
 @font-face {
 	font-family: 'InterDisplay';
 	font-display: swap;
-	src: url("../fonts/InterDisplay-Regular.woff2") format("woff2");
-	     
-	font-weight: 400;
-	font-style: normal;
-}
-
-@font-face {
-	font-family: 'InterDisplay';
-	font-display: swap;
-	src: url("../fonts/InterDisplay-Medium.woff2") format("woff2");
+	src: url("../fonts/InterDisplay-Medium.woff") format("woff");
 		font-weight: 500;
 	font-style: normal;
 }
@@ -18,25 +9,8 @@
 @font-face {
 	font-family: 'InterDisplay';
 	font-display: swap;
-	src: url("../fonts/InterDisplay-SemiBold.woff2") format("woff2");
+	src: url("../fonts/InterDisplay-SemiBold.woff") format("woff");
 		font-weight: 600;
 	font-style: normal;
 }
 
-/* For browsers that support clamp and container queries */
-@supports (font-size: clamp(1rem, 1cqi, 1rem)) {
-  :root {
-		--6xl: clamp(1.63rem, 2.66cqi + 1.09rem, 3.75rem);
-  }
-}
-/* For browsers that don't support clamp or container queries */
-@supports not (font-size: clamp(1rem, 1cqi, 1rem)) {
-  :root {
-		--6xl: 1.63rem;
-  }
-  @media screen and (min-width: 1600px) {
-    :root {
-			--6xl: 3.75rem;
-    }
-  }
-}

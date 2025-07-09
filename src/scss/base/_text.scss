@@ -1,34 +1,155 @@
 
 
-// .h1 {
-// 	// @include font-size(4rem);
-// 	letter-spacing: 0.2813rem;
-// }
-// .h2 {
-// 	// @include font-size(2.5rem);
-// }
-// .h3 {
-// 	// @include font-size(1.75rem);
-// }
-// .h4 {
-// 	// @include font-size(1.25rem);
-// }
-// .accent {
-// 	// @include font-size(1.5rem);
-// 	letter-spacing: 1px;
-// }
-// .explanatory {
-// 	// @include font-size(1rem);
-// }
-// .secondary-text {
-// 	// @include font-size(0.875rem);
-// }
-// .title {
-// 	// @include font-size(1.125rem);
-// 	font-weight: 500;
-// 	border-radius: 20px;
-// 	padding: 5px 15px;
-// }
-// .fs-18 {
-// 	// @include font-size(1.125rem);
-// }
+/* For browsers that support clamp and container queries */
+@supports (font-size: clamp(1rem, 1cqi, 1rem)) {
+  :root {
+		--font-size-88: clamp(2.5rem, 4.68cqi + 1.4rem, 5.5rem);
+  }
+}
+/* For browsers that don't support clamp or container queries */
+@supports not (font-size: clamp(1rem, 1cqi, 1rem)) {
+  :root {
+		--font-size-88: 2.5rem;
+  }
+  @media screen and (min-width: 1400px) {
+    :root {
+			--font-size-88: 5.5rem;
+    }
+  }
+}
+/* For browsers that support clamp and container queries */
+@supports (font-size: clamp(1rem, 1cqi, 1rem)) {
+  :root {
+		--font-size-16: clamp(0.88rem, 0.2cqi + 0.83rem, 1rem);
+  }
+}
+/* For browsers that don't support clamp or container queries */
+@supports not (font-size: clamp(1rem, 1cqi, 1rem)) {
+  :root {
+		--font-size-16: 0.88rem;
+  }
+  @media screen and (min-width: 1400px) {
+    :root {
+			--font-size-16: 1rem;
+    }
+  }
+}
+/* For browsers that support clamp and container queries */
+@supports (font-size: clamp(1rem, 1cqi, 1rem)) {
+  :root {
+		--font-size-28: clamp(0.75rem, 1.56cqi + 0.38rem, 1.75rem);
+  }
+}
+/* For browsers that don't support clamp or container queries */
+@supports not (font-size: clamp(1rem, 1cqi, 1rem)) {
+  :root {
+		--font-size-28: 0.75rem;
+  }
+  @media screen and (min-width: 1400px) {
+    :root {
+			--font-size-28: 1.75rem;
+    }
+  }
+}
+/* For browsers that support clamp and container queries */
+@supports (font-size: clamp(1rem, 1cqi, 1rem)) {
+  :root {
+		--font-size-120: clamp(3rem, 7.02cqi + 1.35rem, 7.5rem);
+  }
+}
+/* For browsers that don't support clamp or container queries */
+@supports not (font-size: clamp(1rem, 1cqi, 1rem)) {
+  :root {
+		--font-size-120: 3rem;
+  }
+  @media screen and (min-width: 1400px) {
+    :root {
+			--font-size-120: 7.5rem;
+    }
+  }
+}
+/* For browsers that support clamp and container queries */
+@supports (font-size: clamp(1rem, 1cqi, 1rem)) {
+  :root {
+		--font-size-96: clamp(3rem, 4.68cqi + 1.9rem, 6rem);
+  }
+}
+/* For browsers that don't support clamp or container queries */
+@supports not (font-size: clamp(1rem, 1cqi, 1rem)) {
+  :root {
+		--font-size-96: 3rem;
+  }
+  @media screen and (min-width: 1400px) {
+    :root {
+			--font-size-96: 6rem;
+    }
+  }
+}
+/* For browsers that support clamp and container queries */
+@supports (font-size: clamp(1rem, 1cqi, 1rem)) {
+  :root {
+		--font-size-48: clamp(1.5rem, 2.34cqi + 0.95rem, 3rem);
+  }
+}
+/* For browsers that don't support clamp or container queries */
+@supports not (font-size: clamp(1rem, 1cqi, 1rem)) {
+  :root {
+		--font-size-48: 1.5rem;
+  }
+  @media screen and (min-width: 1400px) {
+    :root {
+			--font-size-48: 3rem;
+    }
+  }
+}
+/* For browsers that support clamp and container queries */
+@supports (font-size: clamp(1rem, 1cqi, 1rem)) {
+  :root {
+		--font-size-10: clamp(0.63rem, 0.59cqi + 0.49rem, 1rem);
+  }
+}
+/* For browsers that don't support clamp or container queries */
+@supports not (font-size: clamp(1rem, 1cqi, 1rem)) {
+  :root {
+		--font-size-10: 0.63rem;
+  }
+  @media screen and (min-width: 1400px) {
+    :root {
+			--font-size-10: 1rem;
+    }
+  }
+}
+/* For browsers that support clamp and container queries */
+@supports (font-size: clamp(1rem, 1cqi, 1rem)) {
+  :root {
+		--font-size-24: clamp(0.63rem, 1.37cqi + 0.3rem, 1.5rem);
+  }
+}
+/* For browsers that don't support clamp or container queries */
+@supports not (font-size: clamp(1rem, 1cqi, 1rem)) {
+  :root {
+		--font-size-24: 0.63rem;
+  }
+  @media screen and (min-width: 1400px) {
+    :root {
+			--font-size-24: 1.5rem;
+    }
+  }
+}
+/* For browsers that support clamp and container queries */
+@supports (font-size: clamp(1rem, 1cqi, 1rem)) {
+  :root {
+		--font-size-14: clamp(0.5rem, 0.59cqi + 0.36rem, 0.88rem);
+  }
+}
+/* For browsers that don't support clamp or container queries */
+@supports not (font-size: clamp(1rem, 1cqi, 1rem)) {
+  :root {
+		--font-size-14: 0.5rem;
+  }
+  @media screen and (min-width: 1400px) {
+    :root {
+			--font-size-14: 0.88rem;
+    }
+  }
+}

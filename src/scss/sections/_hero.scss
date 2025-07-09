@@ -7,16 +7,13 @@
 	overflow: hidden;
 	background: linear-gradient(180deg, rgba(0, 0, 0, 0) 64.78%, #000000 100%), url("@img/hero.png") no-repeat center / cover;
 
-	&__container {
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		min-height: 100vh;
+	@media (max-width: 991px) {
+		padding-top: 90px;
 	}
 
 
 	&__title {
-		font-size: 86px;
+		font-size: var(--font-size-88);
     font-weight: 600;
     line-height: 0.96;
     letter-spacing: -2.6px;
@@ -30,7 +27,11 @@
 			
 			color: #00E56D; 
 		}
-
+		@media (max-width: 991px) {
+			padding-left: 0;
+			letter-spacing: -.8px;
+			margin-bottom: 15px;
+		}
 		
 	}
 
@@ -41,11 +42,9 @@
 		justify-content: space-between;
 		
 
-		@media (max-width: 768px) {
-			flex-direction: column;
-			align-items: center;
-			text-align: center;
-			gap: 20px;
+		@media (max-width: 991px) {
+			
+			
 		}
 	}
 &__wrap{
@@ -53,18 +52,27 @@
 	justify-content: space-between;
 	align-items: center;
 	width: 50%;
+	@media (max-width: 991px) {
+		width: inherit;
+	}
 }
 	&__text {
 		
-		font-size: 16px;
+		font-size: var(--font-size-16);
 		line-height: 1.2;
 		font-weight: 500;
 		color: #fff;
 		&--mob{
 			display: none;
 		}
-		@media (max-width: 768px) {
-		display: block;
+		@media (max-width: 991px) {
+		display: block;		
+		margin-bottom: 140px;
+		}
+		&--desctop{
+			@media (max-width: 991px) {
+				display: none;
+			}
 		}
 	}
 }
