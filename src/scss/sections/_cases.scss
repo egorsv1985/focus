@@ -3,7 +3,7 @@
 	color: #fff;
 	padding: 240px 0 80px;
 	@media (max-width: 991px) {
-		padding-top: 12px;
+		padding-block: 12px;
 	}
 
 	&__title {
@@ -111,10 +111,15 @@
 
 	&__row {
 		@media (max-width: 991px) {
-			max-width: 100px;
+			width: 100px;
+			max-width: 100%;
+			
 		}
 		&:not(:last-child) {
 			margin-bottom: 34px;
+			@media (max-width: 991px) {
+				margin-bottom: 0;
+			}
 		}
 	}
 
