@@ -2,6 +2,7 @@
 	background: #000;
 	color: #fff;
 	padding: 240px 0 80px;
+	position: relative;
 	@media (max-width: 991px) {
 		padding-block: 12px;
 	}
@@ -35,7 +36,7 @@
 		padding: 20px 0;
 		border-top: 1px solid #2c2c2c;
 		transition: all 0.3s ease;
-		max-height: inherit;
+		max-height: 120px;
 		@media (max-width: 991px) {
 			align-items: inherit;
 		}

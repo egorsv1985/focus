@@ -1,4 +1,5 @@
 document.addEventListener('DOMContentLoaded', function () {
+	// 🍔 Мобильное меню
 	const burger = document.getElementById('burger')
 	const mobileMenu = document.getElementById('mobileMenu')
 
@@ -15,33 +16,34 @@ document.addEventListener('DOMContentLoaded', function () {
 		})
 	})
 
-	// Проверка форматов
+	// 🖼️ Проверка поддержки форматов
 	function supportsWebP() {
-		var elem = document.createElement('canvas')
+		const elem = document.createElement('canvas')
 		return (
 			!!(elem.getContext && elem.getContext('2d')) &&
-			elem.toDataURL('image/webp').indexOf('data:image/webp') == 0
+			elem.toDataURL('image/webp').indexOf('data:image/webp') === 0
 		)
 	}
 
 	function supportsAvif() {
-		var elem = document.createElement('canvas')
+		const elem = document.createElement('canvas')
 		return (
 			!!(elem.getContext && elem.getContext('2d')) &&
-			elem.toDataURL('image/avif').indexOf('data:image/avif') == 0
+			elem.toDataURL('image/avif').indexOf('data:image/avif') === 0
 		)
 	}
 
 	if (supportsWebP()) document.body.classList.add('webp')
 	if (supportsAvif()) document.body.classList.add('avif')
 
+	// 📂 Кейсы
 	const cases = document.querySelectorAll('[data-case]')
 	const hasHoverSupport = window.matchMedia(
 		'(hover: hover) and (pointer: fine)'
 	).matches
 
 	if (hasHoverSupport) {
-		// ✅ Десктоп: ховеры + GSAP
+		// ✅ Десктоп: при наведении один активный кейс
 		cases.forEach(el => {
 			el.addEventListener('mouseenter', () => {
 				cases.forEach(c => c.classList.remove('case--active'))
@@ -49,7 +51,12 @@ document.addEventListener('DOMContentLoaded', function () {
 			})
 		})
 
-		// ✅ GSAP только на десктопах
+		// ✅ Один кейс активен по умолчанию (например, первый)
+		if (cases.length > 0) {
+			cases[0].classList.add('case--active')
+		}
+
+		// ✅ Анимация для блока .integrator с GSAP
 		gsap.registerPlugin(ScrollTrigger)
 
 		const tl = gsap.timeline({
@@ -125,7 +132,7 @@ document.addEventListener('DOMContentLoaded', function () {
 			1.2
 		)
 	} else {
-		// ✅ Мобилки: все кейсы сразу раскрыты, без анимаций
+		// ✅ Мобильные устройства: все кейсы раскрыты
 		cases.forEach(el => el.classList.add('case--active'))
 	}
 })
